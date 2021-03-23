@@ -9,16 +9,16 @@ A place to put projects and snippets of thing I am learning and/or what to share
 
 **Tech used:** HTML, CSS, JavaScript, Node.js
 
-Here's where you can go to town on how you actually built this thing. Write as much as you can here, it's totally fine if it's not too much just make sure you write *something*. If you don't have too much experience on your resume working on the front end that's totally fine. This is where you can really show off your passion and make up for that ten fold.
+I want to create a place where I can see the projects where I have integrated new technologies that I am learning to see my progress on them and hopefully they can be useful to others who are learning the same concepts.
 
 ## Optimizations
 *(optional)*
 
-You don't have to include this section but interviewers *love* that you can not only deliver a final product that looks great but also functions efficiently. Did you write something then refactor it later and the result was 5x faster than the original implementation? Did you cache your assets? Things that you write in this section are **GREAT** to bring up in interviews and you can use this section as reference when studying for technical interviews!
+All of these projects will most likely be in an unoptimized state. This items are not ment to be production quality just using new concepts and technolgy to understand how they work and get them working with the bare minimun effort.
 
 ## Lessons Learned:
 
-No matter what your experience level, being an engineer means continuously learning. Every time you build something you always have those *whoa this is awesome* or *fuck yeah I did it!* moments. This is where you should share those moments! Recruiters and interviewers love to see that you're self-aware and passionate about growing.
+I believe that a core part of being a software engineer is continuos learning,  no matter what your experience level is. Every time you build something with a new language, framework, tech you get those *heck yeah I did it!* moments which motivates us to keep the learning going. This passion allows me to keep making the software I develop be the best it can be to serve the needs of clients and the people they serve.
 
 ## Examples:
 Take a look at these couple examples that I have in my own portfolio:
