@@ -3,7 +3,7 @@ A place to put projects and snippets of thing I am learning and/or what to share
 
 **Link to project:** http://recruiters-love-seeing-live-demos.com/
 
-![alt tag](http://placecorgi.com/1200/650)
+![alt tag](https://github.com/diannedejesus/knowledge-aquisition/blob/main/coin-flipper/coinflipperv3.gif)
 
 ## How It's Made:
 
