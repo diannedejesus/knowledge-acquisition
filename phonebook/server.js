@@ -53,9 +53,26 @@ app.delete('/api/persons/:id', (request, response) => {
 
 app.post('/api/persons', (request, response) => {
     const maxId = Math.floor(Math.random() * 100)
-
     const person = request.body
-    person.id = maxId + 1
+
+    if (!person.name) {
+        return response.status(400).json({ 
+          error: 'name missing' 
+        })
+    }else if(phonebook.find(added => added.name === person.name)){
+        return response.status(400).json({ 
+            error: 'name must be unique' 
+          })
+    }
+
+    if (!person.number) {
+        return response.status(400).json({ 
+          error: 'number missing' 
+        })
+    }
+
+    person.id = maxId
+
 
     phonebook = phonebook.concat(person)
 
