@@ -1,7 +1,7 @@
 # knowledge-aquisition
-A place to put projects and snippets of thing I am learning and/or what to share for others that are learning.
+A place to put projects and snippets of things that I am learning and/or what to share for others that are learning.
 
-**Link to project:** http://live-demos.com/
+**Link to projects:** http://live-demos.com/
 
 ![alt tag](https://github.com/diannedejesus/knowledge-aquisition/blob/main/coin-flipper/coinflipperv3.gif)
 
