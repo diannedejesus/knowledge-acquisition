@@ -9,16 +9,16 @@ A place to put projects and snippets of things that I am learning and/or what to
 
 **Tech used:** HTML, CSS, JavaScript, Node.js
 
-I want to create a place where I can see the projects where I have integrated new technologies that I am learning to see my progress on them and hopefully they can be useful to others who are learning the same concepts.
+I want to create a place where I can see the projects where I have integrated new technologies as a reference for the future and see my progress on them. Hopefully they can be useful to others who are learning the same concepts.
 
 ## Optimizations
 *(optional)*
 
-All of these projects will most likely be in an unoptimized state. This items are not ment to be production quality just using new concepts and technolgy to understand how they work and get them working with the bare minimun effort.
+All of these projects will most likely be in an unoptimized state. These items are not ment to be production quality, I am just using new concepts and technolgy to understand how they work and get them working with the bare minimun effort.
 
 ## Lessons Learned:
 
-I believe that a core part of being a software engineer is continuos learning,  no matter what your experience level is. Every time you build something with a new language, framework, tech you get those *heck yeah I did it!* moments which motivates us to keep the learning going. This passion allows me to keep making the software I develop be the best it can be to serve the needs of clients and the people they serve.
+I believe that a core part of being a software engineer is continuos learning,  no matter what your experience level is. Every time you build something with a new language, framework, tech you get those *heck yeah I did it!* moments which motivates us to keep the learning going. This passion allows me to keep making the software I develop be the best it can be,  to serve the needs of clients and the people they serve.
 
 ## Examples:
 Take a look at these couple examples that I have in my own portfolio:
