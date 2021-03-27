@@ -3,8 +3,7 @@ const express = require('express')
 const app = express()
 
 app.use(express.json())
-app.use(morgan('tiny'))
-
+morgan(app)
 
 let phonebook = [
     {
@@ -23,6 +22,21 @@ let phonebook = [
         number: "39-23-6423122",
     }
 ]
+
+morgan.token('content', function (request, repsonse) { 
+    return request.content
+})
+
+app.use(assignContent)
+app.use(morgan(':method :url :status :res[content-length] - :response-time ms :content'))
+
+
+function assignContent(req, res, next) {
+    if (req.method === "POST") {
+        req.content = JSON.stringify(req.body);
+    }
+    next();
+  }
 
 app.get('/', (request, response) => {
     response.send('<h1>Hi, you have reached my phonebook api</h1>')
@@ -80,6 +94,9 @@ app.post('/api/persons', (request, response) => {
 
     response.json(person)
 })
+
+
+
 
 const unknownEndpoint = (request, response) => {
     response.status(404).send({ error: 'unknown endpoint' })
