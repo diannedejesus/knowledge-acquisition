@@ -1,7 +1,9 @@
 # knowledge-aquisition
 A place to put projects and snippets of things that I am learning and/or what to share for others that are learning.
 
-**Link to projects:** http://live-demos.com/
+**Link to projects:** 
+
+*Tictactoe:* https://diannedejesus.github.io/knowledge-aquisition/tictactoe/
 
 ![expample of how coin flipping game works](https://github.com/diannedejesus/knowledge-aquisition/blob/main/coin-flipper/coinflipperv4.gif)
 ![expample of how tictactoe game works](https://github.com/diannedejesus/knowledge-aquisition/blob/main/tictactoe/tictactoe.gif)
