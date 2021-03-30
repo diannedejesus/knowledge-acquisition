@@ -15,7 +15,6 @@ A place to put projects and snippets of things that I am learning and/or what to
 I want to create a place where I can see the projects where I have integrated new technologies as a reference for the future and see my progress on them. Hopefully they can be useful to others who are learning the same concepts.
 
 ## Optimizations
-*(optional)*
 
 All of these projects will most likely be in an unoptimized state. These items are not ment to be production quality, I am just using new concepts and technolgy to understand how they work and get them working with the bare minimun effort.
 
