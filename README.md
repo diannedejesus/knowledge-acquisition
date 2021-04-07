@@ -22,11 +22,7 @@ All of these projects will most likely be unoptimized. These items are not meant
 
 I believe that a core part of being a software engineer is continuous learning,  no matter what your experience level is. Every time you build something with a new language, framework, tech you get those *heck yeah I did it!* moments that motivate us to keep the learning going. This passion allows me to keep making the software I develop to be the best it can be,  to serve the needs of clients and the people they serve.
 
-## Examples:
-Take a look at these couple examples that I have in my portfolio:
+## Other projects:
+Take a look at these projects that I have:
 
-**Palettable:** https://github.com/alecortega/palettable
-
-**Twitter Battle:** https://github.com/alecortega/twitter-battle
-
-**Patch Panel:** https://github.com/alecortega/patch-panel
+**To-do App:** https://github.com/diannedejesus/100devs_todo
