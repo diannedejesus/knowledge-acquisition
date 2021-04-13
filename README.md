@@ -26,3 +26,4 @@ I believe that a core part of being a software engineer is continuous learning, 
 Take a look at these projects that I have:
 
 **To-do App:** https://github.com/diannedejesus/100devs_todo
+
