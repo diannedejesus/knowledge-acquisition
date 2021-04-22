@@ -17,9 +17,11 @@ router.get('/', ensureGuest, (req, res) =>{
 router.get('/dashboard', ensureAuth, async (req, res) =>{
     try {
         const stories = await Story.find({ user: req.user.id }).lean()
-        res.render('dashboard', {
+        console.log(req.user.googleId)
+        res.render('dashboard.ejs', {
             name: req.user.firstName,
-            stories
+            stories,
+            helper: require('../helpers/hbs')
         })
     } catch (error) {
         console.log(error)

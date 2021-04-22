@@ -21,7 +21,8 @@ router.get('/', ensureAuth, async (req, res) =>{
         .lean()
 
         res.render('stories/index', { 
-            stories, 
+            stories,
+            helper: require('../helpers/hbs'),
         })
     } catch (error) {
         console.log(error)
@@ -42,7 +43,8 @@ router.get('/:id', ensureAuth, async (req, res) =>{
         }
 
         res.render('stories/show', {
-            story
+            story,
+            helper: require('../helpers/hbs'),
         })
     } catch (error) {
         console.log(error)
@@ -66,6 +68,7 @@ router.get('/edit/:id', ensureAuth, async (req, res) =>{
         }else{
             res.render('stories/edit', {
                 story,
+                helper: require('../helpers/hbs'),
             })
         }
     } catch (error) {
@@ -138,7 +141,8 @@ router.get('/user/:userId', ensureAuth, async (req, res) =>{
         .lean()
 
         res.render('stories/index', {
-            stories
+            stories,
+            helper: require('../helpers/hbs'),
         })
     } catch (error) {
         console.log(error)
