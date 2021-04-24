@@ -82,6 +82,7 @@ router.get('/edit/:id', ensureAuth, async (req, res) =>{
 //POST /stories/
 router.post('/', ensureAuth, async (req, res) =>{
     try {
+        //req.body.user = req.user.id //this is giving the session id probably becuase it is matching the closes that resembles _id 
         req.body.user = req.user.id
         await Story.create(req.body)
         res.redirect('/dashboard')
@@ -133,6 +134,7 @@ router.delete('/:id', ensureAuth, async (req, res) =>{
 // GET /stories/user/:userId
 router.get('/user/:userId', ensureAuth, async (req, res) =>{
     try {
+        console.log(req.params)
         const stories = await Story.find({ 
             user: req.params.userId,
             status: 'public'
