@@ -11,7 +11,7 @@ function alphabetPosition(string){
             }
         })
     }
-    return positions
+    return positions.join(' ')
 }
 
 
