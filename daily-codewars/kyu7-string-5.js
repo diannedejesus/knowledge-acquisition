@@ -25,6 +25,10 @@ function capitalize(s){
 };
 
 //#3
+var greet = function(name) {
+  let casedName = name[0].toUpperCase() + name.substring(1, name.length).toLowerCase()
+  return `Hello ${casedName}!`
+};
 
 //#4
 
