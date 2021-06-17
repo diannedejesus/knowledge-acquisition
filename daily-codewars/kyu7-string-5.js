@@ -31,5 +31,14 @@ var greet = function(name) {
 };
 
 //#4
+function shorter_reverse_longer(a,b){
+  if(a.length < b.length){
+    return a + [...b].reverse().join('') + a
+  }else{
+    
+    return b + [...a].reverse().join('') + b
+  }
+  return ""
+}
 
 //#5
