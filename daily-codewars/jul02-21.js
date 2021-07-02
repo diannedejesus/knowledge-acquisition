@@ -16,3 +16,18 @@ function dative(word) {
 function borrow(s){
     return [...s.toLowerCase()].filter(el => el.charCodeAt(0) > 96 && el.charCodeAt(0) < 123).join('')
   }
+
+//
+
+function initializeNames(name){
+    let nameArray = name.split(' ')
+    if(nameArray.length > 2){
+      for(let i=1; i < nameArray.length-1; i++){
+        nameArray[i] = nameArray[i][0] + '.'
+      }
+    }else{
+      return name
+    }
+    
+    return nameArray.join(' ')
+  }
