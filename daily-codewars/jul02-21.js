@@ -31,3 +31,8 @@ function initializeNames(name){
     
     return nameArray.join(' ')
   }
+
+  //
+  function tea42(input) {
+    return [...String(input)].map(el => el === '2' ? 't' : el).join('')
+  };
