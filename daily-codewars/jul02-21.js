@@ -10,3 +10,9 @@ function dative(word) {
     }
   }
 }
+
+//
+
+function borrow(s){
+    return [...s.toLowerCase()].filter(el => el.charCodeAt(0) > 96 && el.charCodeAt(0) < 123).join('')
+  }
