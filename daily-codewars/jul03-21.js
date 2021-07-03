@@ -16,3 +16,11 @@ function sevenAte9(str){
      return str
   }
 
+  //
+
+  function sillycase(silly) {
+    const half = silly.length / 2 + .9
+    silly = silly.substring(0, half).toLowerCase() + silly.substring(half).toUpperCase()
+    return silly
+  }
+
