@@ -24,3 +24,8 @@ function sevenAte9(str){
     return silly
   }
 
+  //
+
+  function makeString(s){
+    return s.split(' ').map(el => el[0]).join('')
+  }
