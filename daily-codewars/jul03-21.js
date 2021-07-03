@@ -29,3 +29,9 @@ function sevenAte9(str){
   function makeString(s){
     return s.split(' ').map(el => el[0]).join('')
   }
+  
+  //
+  function swap(st){
+    const vowels = 'aeiou'
+    return [...st].map(el => vowels.includes(el) ? el.toUpperCase() : el).join('')
+  }
