@@ -35,5 +35,18 @@ function areaCode(text) {
     }
   }
 
-
+//4
+function freqSeq(str, sep) {
+  let frequencies = {}
+  
+  for(let i=0; i<str.length; i++){
+    if(str[i] in frequencies){
+      frequencies[str[i]]++
+    }else{
+      frequencies[str[i]] = 1
+    }
+  }
+  
+  return [...str].map(el => frequencies[el]).join(sep)
+}
     
