@@ -17,4 +17,9 @@ function getCount(words) {
   return result
 }
 
-//
+//2
+function orderWord(s){
+    if(typeof s !== 'string' || !s || s === '') return 'Invalid String!'
+    
+    return [...s].sort((a, b) => a.charCodeAt(0) - b.charCodeAt(0)).join('')
+  }
