@@ -8,3 +8,8 @@ function howMuchILoveYou(nbPetals) {
 function differenceInAges(ages){
     return [Math.min(...ages),Math.max(...ages),Math.max(...ages)-Math.min(...ages)]
   }
+
+  //3
+  function printArray(array){
+    return array.join();
+  }
