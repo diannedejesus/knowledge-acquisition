@@ -9,3 +9,8 @@
   //which means when going thru the array I am taking the first number and substrating the second 
   //and then go to the second number and substract the third and so on. and storing those results
   //I can store them in an array the add them or start adding them as I go.
+  function sumOfDifferences(arr) {
+    return arr.sort((a, b) => b - a).reduce((acc, el, index, array) => {
+       return index < array.length-1 ? acc + (el - array[index+1]) : acc
+    },0) 
+   }
