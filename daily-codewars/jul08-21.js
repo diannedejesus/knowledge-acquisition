@@ -19,3 +19,15 @@
    function divisibleBy(numbers, divisor){
     return numbers.filter(el => el % divisor === 0 )
    }
+
+   //3
+   Array.prototype.filter = function (func) {
+    let newArray = []
+    for(let i=0; i<this.length; i++){
+      if(func(this[i])){
+        newArray.push(this[i])
+      }
+    }
+    return newArray
+  }
+  
