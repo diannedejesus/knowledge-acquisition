@@ -14,3 +14,8 @@
        return index < array.length-1 ? acc + (el - array[index+1]) : acc
     },0) 
    }
+
+   //2
+   function divisibleBy(numbers, divisor){
+    return numbers.filter(el => el % divisor === 0 )
+   }
