@@ -37,3 +37,60 @@ console.log(duplicateEncoder("din") ===  "(((")
 console.log(duplicateEncoder("recede" ) ===  "()()()")
 console.log(duplicateEncoder("Success") ===  ")())())")
 console.log(duplicateEncoder("(( @") ===  "))((")
+
+
+
+////leetcode
+
+//in this exersize we will check if an integer is a palindrone
+//whether the number is the same backwards or forwards
+
+//the function will recieve an integer to test
+//and it wil return a boolean value
+
+//if 123 then false
+//if 121 then true
+
+//the simplest solution would be to convert the number into an string so we can use some methods on it
+
+//convert the given int to a string with the tostring method 
+//then split the string into characters and use the reverse method on the array followed by the join method which will give us the backwards version of the number 
+//compare the backwards version to the forward version and if they are the same we return true, if not we return false.
+
+function isPalidrone(intNum){
+  let stringInt = intNum.toString()
+
+  if(stringInt.split('').reverse().join('') === stringInt){
+    return true
+  }else{
+    return false
+  }
+}
+
+// console.log(isPalidrone(121) === true)
+// console.log(isPalidrone(-121) === false)
+// console.log(isPalidrone(10) === false)
+// console.log(isPalidrone(-101) === false)
+
+//alterantely if we needed to work in pure numbers it should test for negative numbers which will always be false
+//then we could reconstruct the number in reverse order by dividing the number by 10 ^ of number length which will return the first number we can add that number that to a new string by multiply it by it by its place i++
+
+function isPalidrone2(intNum){
+  let reversedNumber = 0
+  let tempNum = intNum
+  const len = Math.ceil(Math.log10(intNum + 1));
+
+  if(intNum < 0){ return false}
+
+  for(let i=1; i<=len; i++){
+    let currentNum = ~~(tempNum / (10**(len-i)))
+    reversedNumber += currentNum * (i>1?10**(i-1): i)
+    tempNum -= currentNum * (10**(len-i))
+  }
+  return intNum === reversedNumber ? true : false
+}
+
+console.log(isPalidrone2(121) === true)
+console.log(isPalidrone2(-121) === false)
+console.log(isPalidrone2(10) === false)
+console.log(isPalidrone2(-101) === false)
