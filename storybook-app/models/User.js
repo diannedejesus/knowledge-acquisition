@@ -1,8 +1,11 @@
 const mongoose = require('mongoose')
 const UserSchema = new mongoose.Schema({
+    //TODO: Add requiered id option
     googleId: {
         type: String,
-        required: true
+    },
+    microsiftId: {
+        type: String,
     },
     displayName: {
         type: String,
@@ -10,11 +13,11 @@ const UserSchema = new mongoose.Schema({
     },
    firstName: {
         type: String,
-        required: true
+        //required: true
     },
     lastName: {
         type: String,
-        required: true
+        //required: true
     },
    image: {
         type: String
