@@ -14,7 +14,6 @@ console.log(arrays.reduce((acc,cur) => {
 
 // When defining the function, you can use a regular loop to do the actual looping.
 
-// 1
 // // Your code here.
 function loop(value, test, update, body){
     let currentValue = value
@@ -25,13 +24,30 @@ function loop(value, test, update, body){
    } 
 }
 
-// 2
-// ​
-// 3
 loop(3, n => n > 0, n => n - 1, console.log)
-// 4
 // // → 3
-// 5
 // // → 2
-// 6
 // // → 1
+
+// Everything
+// Analogous to the some method, arrays also have an every method. This one returns true when the given function returns true for every element in the array. In a way, some is a version of the || operator that acts on arrays, and every is like the && operator.
+
+// Implement every as a function that takes an array and a predicate function as parameters. Write two versions, one using a loop and one using the some method.
+
+function every(array, test) {
+    // for(let i=0; i<array.length; i++){
+    //     if(!test(array[i])){
+    //         return false
+    //     }
+    // }
+
+    // return true
+    return !array.some(element => !test(element) )
+}
+
+console.log(every([1, 3, 5], n => n < 10));
+// → true
+console.log(every([2, 4, 16], n => n < 10));
+// → false
+console.log(every([], n => n < 10));
+// → true
