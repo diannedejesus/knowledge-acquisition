@@ -15,8 +15,28 @@
 
 //we will create a new list
 
-//I want the while loop to through both lists as long as it is not null. 
-//I need to account for when either list has less items then the other.
+//In this exercise I created an empty object to store the new list
+//and a variable to act as a pointer to point at the part of the object we are currently working with.
+//as long as both lists contain items we will continue looping
+//we verify if which of the current items of both list is smaller
+//we add that item to next key of our object and move that list to the next item
+//then we will move our list to the next item/space to add the next item.
+//when one of the two list is empty the loop will stop and then we will check if one of the lists still has items. if it does then we append them to the end.
+
+//this last part also accounts for one of the two list being empty.
+//if one is empty then the loop wont run and we will have an empty object
+//the we check if one of the list has items and that will be assign to our empty object.
+
+//this works becuase when working with objects we can't directly create a copy. Instead when we assign it like in the line:
+// let compileList = sortedList
+//we are passing a reference to the original object
+//so this line:
+//compileList.next = l1
+//is saying create the key next inside of sortedList and assign l1 to it (we would be assigning the entire l1 list)
+//here:
+//compileList = compileList.next
+//here we will be changing the reference of compile list to the key next, which will move it so we can assign the next item
+//even though we are assigning the passed lists to the current next item it doesn't matter since we move and reassign it constructing our new list in the order we need it to be.
 
 function mergeLists(l1, l2){
     let sortedList = {}
@@ -31,7 +51,6 @@ function mergeLists(l1, l2){
         l2 = l2.next;
       }
       compileList = compileList.next
-      //console.log(sortedList)
     }
   
     if (l1 === null) { compileList.next = l2; }
