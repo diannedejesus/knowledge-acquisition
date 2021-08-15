@@ -15,65 +15,87 @@
 
 //we will create a new list
 
-//then we will cycle through the list comparing values and inserting accordingly.
+//I want the while loop to through both lists as long as it is not null. 
+//I need to account for when either list has less items then the other.
 
 function mergeLists(l1, l2){
-  let sortedList = []
-  if(l1 === null && l2 !== null){return l2}
-  if(l1 !== null && l2 === null){return l1}
-    
-  while (l1 !== null || l2 !== null) {
-    if(l1 !== null || l2 !== null){
-      if(l1 === null){
-        console.log(l2)
-        sortedList.push(l2.val)
-        l2 = l2.next;
-      }else{
-        sortedList.push(l1.val)
+    let sortedList = {}
+    let compileList = sortedList
+  
+    while (l1 !== null && l2 !== null) {
+      if(l1.val < l2.val){
+        compileList.next = l1
         l1 = l1.next; 
+      }else {
+        compileList.next = l2
+        l2 = l2.next;
       }
-    }else if (l1.val < l2.val) {
-      sortedList.push(l1.val)
-      l1 = l1.next; 
-    } else {
-      sortedList.push(l2.val)
-      l2 = l2.next;
-      //if(l2 === null){sortedList.push(l1.val)}
+      compileList = compileList.next
+      //console.log(sortedList)
     }
+  
+    if (l1 === null) { compileList.next = l2; }
+    if (l2 === null) { compileList.next = l1; }
+  
+    return sortedList.next
   }
-
-  let list = null;
-  for (let i = sortedList.length - 1; i >= 0; i--) {
-    list = {val: sortedList[i], next: list};
-  }
-
-  return list
-}
-
-const list1 = {
-  val: 2,
-  next: {
-    val: 3,                                             
-    next: {
-      val: 4,
-      next: null,	
-    }
-  }
-}
-
-const list2 = {
-  val: 1,
-  next: {
+  
+  //cases to use as tests
+  const list1 = {
     val: 2,
-    next: null,                                         
+    next: {
+      val: 3,                                             
+      next: {
+        val: 4,
+        next: null,	
+      }
+    }
   }
-}
-
-
-
-
-
-console.log(mergeLists(list1, list2)) //[1,2,2,3,4,5]
-// console.log(mergeLists([1,2,4], [1,3,4])) //[1,1,2,3,4,4]
-// console.log(mergeLists([], []))
-// console.log(mergeLists([], [0]))
+  
+  const list2 = {
+    val: 1,
+    next: {
+      val: 2,
+      next: {
+        val: 3,
+        next: {
+          val: 6,
+          next: null,	
+        }	
+      }                                         
+    }
+  }
+  
+  const list3 = {
+    val: 1,
+    next: {
+      val: 2,
+      next: {
+        val: 4,
+        next: null,
+      }                                         
+    }
+  }
+  
+  const list4 = {
+    val: 1,
+    next: {
+      val: 3,
+      next: {
+        val: 4,
+        next: null,
+      }                                         
+    }
+  }
+  
+  const list5 = {
+    val: 0,
+    next: null,
+  }
+  
+  //tests
+  
+  console.log(mergeLists(list1, list2)) //[1,2,2,3,4,5]
+  console.log(mergeLists(list3, list4)) //[1,1,2,3,4,4]
+  console.log(mergeLists(null, null))
+  console.log(mergeLists(null, list5))
